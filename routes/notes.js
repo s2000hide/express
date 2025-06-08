@@ -5,7 +5,7 @@ varrouter= express.Router();
 
 // 接続情報を設定
 const{ MongoClient} = require("mongodb");
-consturi= "xxxxx";
+consturi= "mongodb+srv://2101140507py:<db_password>@cluster0.qipzhju.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 constclient= newMongoClient(uri);
 router.get('/', async(req, res) =>{
 
