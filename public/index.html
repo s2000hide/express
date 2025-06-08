@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News API Example</title>
+  </head>
+  <body>
+    <img id="news-image" src="" alt="News image" style="max-width: 600px;">
+    <script>
+      fetch('/news-image')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          const newsImage = document.getElementById('news-image');
+          if (data.imageUrl) {
+            newsImage.src = data.imageUrl;
+          } else {
+            newsImage.alt = 'No image available';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    </script>
+  </body>
+</html>
