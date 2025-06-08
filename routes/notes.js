@@ -15,7 +15,7 @@ const notes= database.collection('notes');
 
 // idが１のドキュメントを取得
 const query= { id:2};
-const note= awaitnotes.findOne(query);
+const note= await notes.findOne(query);
 
 res.json(note);
 })
