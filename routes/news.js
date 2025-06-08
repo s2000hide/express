@@ -22,23 +22,9 @@ router.get('/', async function(req, res, next) {
       <html>
       <head>
         <meta charset="UTF-8">
-        <style>
-          body { 
-            margin: 0; 
-            padding: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-          }
-          img { 
-            max-width: 100%; 
-            max-height: 100vh; 
-          }
-        </style>
       </head>
       <body>
-        <img src="${selectedArticle.urlToImage}" alt="ニュース画像">
+        <img src="${selectedArticle.urlToImage}">
       </body>
       </html>
     `;
