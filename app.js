@@ -8,8 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var helloRouter = require('./routes/hello');
 var notesRouter = require('./routes/notes');
+var catRouter = require('./routes/cat');
 // 追加: ニュースAPIを使用するためのルーター
 var newsRouter = require('./routes/news');
+var note_from_bRouter = require('./routes/notes_from_b');
 
 var app = express();
 
@@ -27,8 +29,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
 app.use('/notes', notesRouter);
+app.use('/cat', catRouter);
 // 追加: ニュースAPIのルーターを使用
 app.use('/news', newsRouter);
+app.use('/notes_from_b', note_from_bRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
