@@ -1,0 +1,2 @@
+# ここにMongoDBの接続URIを設定します
+mongodb_URI ="mongodb+srv://メールアドレス:パスワード@cluster0.qipzhju.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
